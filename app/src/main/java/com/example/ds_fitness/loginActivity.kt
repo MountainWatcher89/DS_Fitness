@@ -1,18 +1,19 @@
 package com.example.ds_fitness
 
-import android.content.Context
-import android.util.AttributeSet
 import android.graphics.Canvas
+import android.graphics.Color
 import android.graphics.Paint
 import android.graphics.Typeface
-import android.graphics.Color
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
 import android.view.View
 
-class loginView: View
-{
-    constructor(context: Context?) : super(context)
-    constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs)
-    constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr)
+class loginActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        this.setContentView(R.layout.activity_main)
+    }
 
     //Grey 160,160,160
     //Cyan 51.153.255
@@ -28,6 +29,10 @@ class loginView: View
     private var myBackPaint: Paint
     private var myLoginBoxPaint: Paint
     private var myTextPaint: Paint
+
+    //Set login screen widgets?
+    //val myEditText = EditText
+
 
     init
     {

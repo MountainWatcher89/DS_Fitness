@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">DS_Fitness</string>
+    <string name="textView_enter_username">Username</string>
 </resources>
