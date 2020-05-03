@@ -63,11 +63,11 @@ class loginActivity : AppCompatActivity() {
 
     override fun onDraw(canvas: Canvas)
     {
-        super.onDraw(canvas)
+        //super.onDraw(canvas)
 
-        val screenWidth = width.toFloat()
-        val screenHeight = height.toFloat()
-        val bannerHeight = screenHeight / 7
+        //val screenWidth = width.toFloat()
+        //val screenHeight = height.toFloat()
+        //val bannerHeight = screenHeight / 7
 
         //Rectangle parameters
         //left - The X coordinate of the left side of the rectangle
@@ -77,17 +77,17 @@ class loginActivity : AppCompatActivity() {
         //paint - The paint object that will be used to display the rectangle
 
         //Draw background
-        canvas.drawRect(0f, 0f, screenWidth, screenHeight, myBackPaint)
+        //canvas.drawRect(0f, 0f, screenWidth, screenHeight, myBackPaint)
 
         //Draw top and bottom rectangles
-        canvas.drawRect(0f, 0f, screenWidth, bannerHeight, myTopAndBottomBandsPaint)
-        canvas.drawRect(0f, screenHeight - bannerHeight, screenWidth, screenHeight, myTopAndBottomBandsPaint)
+        //canvas.drawRect(0f, 0f, screenWidth, bannerHeight, myTopAndBottomBandsPaint)
+        //canvas.drawRect(0f, screenHeight - bannerHeight, screenWidth, screenHeight, myTopAndBottomBandsPaint)
 
         //Draw login page title
-        canvas.drawText("DS Fitness", (screenWidth / 2), (bannerHeight / 2) + 20, myTextPaint)
+        //canvas.drawText("DS Fitness", (screenWidth / 2), (bannerHeight / 2) + 20, myTextPaint)
 
         //Draw login rectangle
-        canvas.drawRect((screenWidth / 5), screenWidth * 2, screenWidth * 4, bannerHeight * 5, myLoginBoxPaint)
+        //canvas.drawRect((screenWidth / 5), screenWidth * 2, screenWidth * 4, bannerHeight * 5, myLoginBoxPaint)
 
 
     }
