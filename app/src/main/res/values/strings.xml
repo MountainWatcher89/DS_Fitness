@@ -3,4 +3,6 @@
     <string name="textView_enter_username">Username</string>
     <string name="textView_enter_password">Password</string>
     <string name="editText_enter_username"></string>
+    <string name="btn_login_text">Login</string>
+    <string name="btn_sign_up_text">Sign up</string>
 </resources>

@@ -19,50 +19,27 @@ class loginActivity : AppCompatActivity() {
     //Cyan 51.153.255
 
     //Set the color values
-    private val myTopAndBottomBandsCol: Int = Color.rgb(51, 153, 255)
-    private val myBackCol: Int = Color.rgb(160, 160, 160)
-    private val myLoginBoxCol: Int = Color.rgb(224, 224, 224)
-    private val myTextCol: Int = Color.WHITE
 
-    //Set the paint variables
-    private var myTopAndBottomBandsPaint: Paint
-    private var myBackPaint: Paint
-    private var myLoginBoxPaint: Paint
-    private var myTextPaint: Paint
 
     //Set login screen widgets?
     //val myEditText = EditText
 
-
-    init
+    public fun onLoginClick(view: View)
     {
-        //Paint objects
+        //On click function simply calls valdation methods, to decouple the logic from the implementation
 
-        myTopAndBottomBandsPaint = Paint().apply{
-            style = Paint.Style.FILL
-            color = myTopAndBottomBandsCol
-        }
 
-        myBackPaint = Paint().apply{
-            style = Paint.Style.FILL
-            color = myBackCol
-        }
-
-        myLoginBoxPaint = Paint().apply{
-            style = Paint.Style.FILL
-            color = myLoginBoxCol
-        }
-
-        myTextPaint = Paint().apply {
-            textAlign = Paint.Align.CENTER
-            textSize = 55f
-            typeface = Typeface.SANS_SERIF
-            color = myTextCol
-        }
     }
 
-    override fun onDraw(canvas: Canvas)
+    private fun validateLoginAttempt(recUserName: String, recPassword: String): Boolean
     {
+        var retVal: Boolean = false
+
+        return retVal
+    }
+
+    //override fun onDraw(canvas: Canvas)
+    //{
         //super.onDraw(canvas)
 
         //val screenWidth = width.toFloat()
@@ -90,5 +67,5 @@ class loginActivity : AppCompatActivity() {
         //canvas.drawRect((screenWidth / 5), screenWidth * 2, screenWidth * 4, bannerHeight * 5, myLoginBoxPaint)
 
 
-    }
+    //}
 }
