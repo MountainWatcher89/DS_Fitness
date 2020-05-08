@@ -57,6 +57,7 @@
             android:padding="5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="text"
             android:hint="@string/editText_enter_username"/>
 
         <TextView
@@ -87,8 +88,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
                 android:layout_weight="1"
-                android:text="@string/btn_login_text"
-                android:onClick="onLoginClick"/>
+                android:text="@string/btn_login_text" />
 
             <Button
                 android:id="@+id/button_sign_up"

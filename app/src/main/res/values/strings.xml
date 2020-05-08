@@ -5,4 +5,15 @@
     <string name="editText_enter_username"></string>
     <string name="btn_login_text">Login</string>
     <string name="btn_sign_up_text">Sign up</string>
+
+    <string name="bmi_calculator">BMI Calculator</string>
+    <string name="todo">TODO</string>
+    <string name="nutrition_plans">Nutrition Plans</string>
+    <string name="workout_plans">Workout Plans</string>
+    <string name="activity_tracking">Activity Tracking</string>
+    <string name="quotes">Success usually comes to those who are too busy to be looking for it.</string>
+    <string name="Quotes">“Success usually comes to those who are too busy to be looking for it.”</string>
+    <string name="quote_of_the_day">Quote of the Day</string>
+    <string name="sign_off">Sign off</string>
+    <string name="ThoreauQuote">“Success usually comes to those who are too busy to be looking for it.” by Henry David Thoreau</string>
 </resources>
