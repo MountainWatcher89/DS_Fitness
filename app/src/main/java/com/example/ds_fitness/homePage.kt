@@ -5,9 +5,12 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.LinearLayout
+import android.widget.TextView
 import java.util.logging.Logger
 
 class homePage : AppCompatActivity(){
+
+    private lateinit var textUsername: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,6 +22,12 @@ class homePage : AppCompatActivity(){
         {
             Logger.getLogger(homePage::class.java.name).warning("An error occured while trying to create the activity: " + e.toString())
             throw e
+        }
+
+        if(intent.getStringExtra("ID_EXTRA") != null)
+        {
+            textUsername = findViewById(R.id.textUsername)
+            textUsername.text = intent.getStringExtra("ID_EXTRA")
         }
 
         val bmiBtn = findViewById<LinearLayout>(R.id.bmiCalculator)

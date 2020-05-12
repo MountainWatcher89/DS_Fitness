@@ -13,6 +13,7 @@
     <string name="activity_tracking">Activity Tracking</string>
     <string name="quotes">Success usually comes to those who are too busy to be looking for it.</string>
     <string name="quote_of_the_day">Quote of the Day</string>
-    <string name="sign_off">Sign off</string>
+    <string name="sign_off">Sign out</string>
     <string name="ThoreauQuote">“Success usually comes to those who are too busy to be looking for it.” by Henry David Thoreau</string>
+    <string name="text_username_text">username</string>
 </resources>
