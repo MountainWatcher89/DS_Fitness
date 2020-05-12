@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 
-class loginActivity : AppCompatActivity() {
+class LoginActivity : AppCompatActivity() {
 
     private lateinit var enteredUsername: EditText
     private lateinit var enteredPassword: EditText
@@ -17,12 +17,13 @@ class loginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        this.setContentView(R.layout.activity_main)
+        this.setContentView(R.layout.login_layout)
 
         enteredUsername = findViewById(R.id.username_edit_text)
         enteredPassword = findViewById(R.id.password_edit_text)
         buttonLogin = findViewById(R.id.button_login)
         buttonSignUp = findViewById(R.id.button_sign_up)
+
 
         buttonLogin.setOnClickListener()
         {
@@ -46,7 +47,6 @@ class loginActivity : AppCompatActivity() {
             //Get interface to display message to user
             showFailedLoginState()
         }
-
     }
 
     private  fun showFailedLoginState()

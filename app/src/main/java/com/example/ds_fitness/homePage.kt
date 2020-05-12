@@ -4,16 +4,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.content.Intent
 import android.os.Bundle
 import android.widget.LinearLayout
-import com.example.homedashboard.BMIActivity
-import com.example.homedashboard.NutritionActivity
-import com.example.homedashboard.TrackingActivity
-import com.example.homedashboard.WorkoutActivity
 
 class homePage : AppCompatActivity(){
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.second_activity_layout)
+        setContentView(R.layout.homepage_layout)
 
         val bmiBtn = findViewById<LinearLayout>(R.id.bmiCalculator)
         val nutritionBtn = findViewById<LinearLayout>(R.id.nutritionPlans)

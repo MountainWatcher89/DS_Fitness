@@ -9,12 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".loginActivity">
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".homePage"/>
+        <activity android:name=".BMIActivity"/>
+        <activity android:name=".NutritionActivity"/>
+        <activity android:name=".TrackingActivity"/>
+        <activity android:name=".WorkoutActivity"/>
+
     </application>
 
 </manifest>
