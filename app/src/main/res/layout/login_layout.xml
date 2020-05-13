@@ -135,6 +135,34 @@
                 android:padding="5dp" />
 
             <TextView
+                android:id="@+id/username_invalid_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Entered username is already in use or is not allowed. Enter a different username."
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textEmailLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/textView_enter_username" />
+
+            <EditText
+                android:id="@+id/email_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/editText_enter_username"
+                android:inputType="text"
+                android:padding="5dp" />
+
+            <TextView
+                android:id="@+id/email_invalid_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Entered email address is already in use or is not allowed. Enter a different username."
+                android:visibility="gone" />
+
+            <TextView
                 android:id="@+id/textNewPasswordLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

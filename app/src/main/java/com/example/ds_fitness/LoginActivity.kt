@@ -7,14 +7,35 @@ import android.widget.Button
 import android.widget.EditText
 import android.view.View
 import android.widget.TextView
+import org.w3c.dom.Text
 
 class LoginActivity : AppCompatActivity() {
 
-    private lateinit var textLoginFailed: TextView
+    //Login widgets
+
     private lateinit var enteredUsername: EditText
     private lateinit var enteredPassword: EditText
+
+    private lateinit var textLoginFailed: TextView
+
     private lateinit var buttonLogin : Button
     private lateinit var buttonSignUp : Button
+
+    //Sign up widgets
+    private lateinit var enteredNewUsername: EditText
+    private lateinit var enteredNewEmail : EditText
+    private lateinit var enteredNewPassword: EditText
+    private lateinit var enteredNewConfirmedPassword: EditText
+
+    private lateinit var textUsernameInvalid: TextView
+    private lateinit var textEmailInvalid: TextView
+    private lateinit var textNewPasswordInvalid: TextView
+    private lateinit var textNewConfirmedPasswordInvalid: TextView
+    private lateinit var textSignUpFailed: TextView
+
+    private lateinit var buttonCancelSignUp: Button
+    private lateinit var buttonFinishSignUp: Button
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,10 +43,25 @@ class LoginActivity : AppCompatActivity() {
 
         enteredUsername = findViewById(R.id.username_edit_text)
         enteredPassword = findViewById(R.id.password_edit_text)
+        enteredNewUsername = findViewById(R.id.newUsername_edit_text)
+        enteredNewEmail = findViewById(R.id.email_edit_text)
+        enteredNewPassword = findViewById(R.id.newPassword_edit_text)
+        enteredNewConfirmedPassword = findViewById(R.id.newConfirmPassword_edit_text)
+
+        textLoginFailed = findViewById(R.id.login_failed_text)
+        textUsernameInvalid = findViewById(R.id.username_invalid_text)
+        textEmailInvalid = findViewById(R.id.email_invalid_text)
+        textNewPasswordInvalid = findViewById(R.id.new_password_invalid_text)
+        textNewConfirmedPasswordInvalid = findViewById(R.id.newConfirmPassword_edit_text)
+        textSignUpFailed = findViewById(R.id.signUp_failed_text)
+
         buttonLogin = findViewById(R.id.button_login)
         buttonSignUp = findViewById(R.id.button_sign_up)
-        textLoginFailed = findViewById(R.id.login_failed_text)
+        buttonCancelSignUp = findViewById(R.id.button_cancel_signUp)
+        buttonFinishSignUp = findViewById(R.id.button_confirm_sign_up)
 
+
+        //Login button listener
         buttonLogin.setOnClickListener()
         {
             //Button click will call a separate validation method
