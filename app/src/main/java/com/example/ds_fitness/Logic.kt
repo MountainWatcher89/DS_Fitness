@@ -1,5 +1,7 @@
 package com.example.ds_fitness
 
+import android.widget.Button
+import android.widget.EditText
 import java.math.BigInteger
 import java.security.MessageDigest
 
@@ -23,6 +25,27 @@ class Logic
             //val hashedPasswordInput = passwordInput.sha256()
 
             return retVal
+        }
+
+        fun enableEditText(editText: EditText)
+        {
+            editText.isClickable = true
+        }
+
+        fun disableEditText(editText: EditText)
+        {
+            editText.text = null
+            editText.isClickable = false
+        }
+
+        fun enableButton(button: Button)
+        {
+            button.isClickable = true
+        }
+
+        fun disableButton(button: Button)
+        {
+            button.isClickable = false
         }
 
         fun String.sha256(): String {

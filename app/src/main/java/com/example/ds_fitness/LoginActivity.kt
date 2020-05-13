@@ -6,10 +6,15 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.view.View
+import android.widget.LinearLayout
 import android.widget.TextView
 import org.w3c.dom.Text
 
 class LoginActivity : AppCompatActivity() {
+
+    //Linear layouts
+    private lateinit var myLoginLinearLayout: LinearLayout
+    private lateinit var mySignUpLinearLayout: LinearLayout
 
     //Login widgets
 
@@ -41,22 +46,30 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         this.setContentView(R.layout.login_layout)
 
+        myLoginLinearLayout = findViewById(R.id.loginWidgetsLayout)
+        mySignUpLinearLayout = findViewById(R.id.signUpWidgetsLayout)
+
         enteredUsername = findViewById(R.id.username_edit_text)
         enteredPassword = findViewById(R.id.password_edit_text)
+
         enteredNewUsername = findViewById(R.id.newUsername_edit_text)
         enteredNewEmail = findViewById(R.id.email_edit_text)
         enteredNewPassword = findViewById(R.id.newPassword_edit_text)
         enteredNewConfirmedPassword = findViewById(R.id.newConfirmPassword_edit_text)
 
+
         textLoginFailed = findViewById(R.id.login_failed_text)
+
         textUsernameInvalid = findViewById(R.id.username_invalid_text)
         textEmailInvalid = findViewById(R.id.email_invalid_text)
         textNewPasswordInvalid = findViewById(R.id.new_password_invalid_text)
         textNewConfirmedPasswordInvalid = findViewById(R.id.newConfirmPassword_edit_text)
         textSignUpFailed = findViewById(R.id.signUp_failed_text)
 
+
         buttonLogin = findViewById(R.id.button_login)
         buttonSignUp = findViewById(R.id.button_sign_up)
+
         buttonCancelSignUp = findViewById(R.id.button_cancel_signUp)
         buttonFinishSignUp = findViewById(R.id.button_confirm_sign_up)
 
@@ -66,6 +79,52 @@ class LoginActivity : AppCompatActivity() {
         {
             //Button click will call a separate validation method
             validateLoginAttempt(enteredUsername.text.toString(), enteredPassword.text.toString())
+        }
+
+        //Sign up button listener
+        buttonSignUp.setOnClickListener()
+        {
+            //Deactivate and clear the login widgets
+            Logic.disableEditText(enteredUsername)
+            Logic.disableEditText(enteredPassword)
+
+            Logic.disableButton(buttonLogin)
+            Logic.disableButton(buttonSignUp)
+
+            //Hide the login section
+            myLoginLinearLayout.visibility = View.GONE
+
+            //Show sign up section
+            mySignUpLinearLayout.visibility = View.VISIBLE
+
+            //Show and activate the sign up widgets
+
+
+        }
+
+        //Login button listener
+        buttonCancelSignUp.setOnClickListener()
+        {
+            //Deactivate and clear the sign up widgets
+
+            //Hide the sign up section
+            mySignUpLinearLayout.visibility = View.GONE
+
+            //Show login section
+            myLoginLinearLayout.visibility = View.VISIBLE
+
+            //Show and activate the login widgets
+            Logic.enableEditText(enteredUsername)
+            Logic.enableEditText(enteredPassword)
+
+            Logic.enableButton(buttonLogin)
+            Logic.enableButton(buttonSignUp)
+        }
+
+        //Sign up button listener
+        buttonFinishSignUp.setOnClickListener()
+        {
+
         }
 
     }
