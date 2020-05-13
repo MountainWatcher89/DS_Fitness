@@ -48,6 +48,12 @@ class Logic
             button.isClickable = false
         }
 
+        //This function is called when a user creates a valid account
+        fun createUserAccount()
+        {
+
+        }
+
         fun String.sha256(): String {
             val md = MessageDigest.getInstance("SHA-256")
             return BigInteger(1, md.digest(toByteArray())).toString(16).padStart(32, '0')

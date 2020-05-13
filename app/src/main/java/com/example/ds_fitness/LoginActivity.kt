@@ -97,8 +97,14 @@ class LoginActivity : AppCompatActivity() {
             //Show sign up section
             mySignUpLinearLayout.visibility = View.VISIBLE
 
-            //Show and activate the sign up widgets
+            //Activate the sign up widgets
+            Logic.enableEditText(enteredNewUsername)
+            Logic.enableEditText(enteredNewEmail)
+            Logic.enableEditText(enteredNewPassword)
+            Logic.enableEditText(enteredNewConfirmedPassword)
 
+            Logic.enableButton(buttonCancelSignUp)
+            Logic.enableButton(buttonFinishSignUp)
 
         }
 
@@ -106,6 +112,13 @@ class LoginActivity : AppCompatActivity() {
         buttonCancelSignUp.setOnClickListener()
         {
             //Deactivate and clear the sign up widgets
+            Logic.disableEditText(enteredNewUsername)
+            Logic.disableEditText(enteredNewEmail)
+            Logic.disableEditText(enteredNewPassword)
+            Logic.disableEditText(enteredNewConfirmedPassword)
+
+            Logic.disableButton(buttonCancelSignUp)
+            Logic.disableButton(buttonFinishSignUp)
 
             //Hide the sign up section
             mySignUpLinearLayout.visibility = View.GONE
@@ -124,7 +137,10 @@ class LoginActivity : AppCompatActivity() {
         //Sign up button listener
         buttonFinishSignUp.setOnClickListener()
         {
-
+            validateCreateAccount(enteredNewUsername.text.toString(),
+                enteredNewEmail.text.toString(),
+                enteredNewPassword.text.toString(),
+                enteredNewConfirmedPassword.text.toString())
         }
 
     }
@@ -145,23 +161,17 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
+    private fun validateCreateAccount(recUserName: String, recEmail: String, recPassword: String, recConfirmPassword: String)
+    {
+
+    }
+
     private fun showFailedLoginState()
     {
         //Change the login page layout so that it tells the user that the previous login attempt
         // failed.
-        showView(textLoginFailed as View)
+        textLoginFailed.visibility = View.VISIBLE
 
-    }
-
-    //May be better if this was moved to the logic class
-    private fun showView(view: View)
-    {
-        view.visibility = View.VISIBLE
-    }
-
-    private fun hideView(view: View)
-    {
-        view.visibility = View.GONE
     }
 
 }
