@@ -41,71 +41,168 @@
         android:background="@drawable/background_rectangle"
         android:orientation="vertical"
         android:padding="10dp">
-
         <!-- android:layout_width="wrap_content"-->
         <!---android:layout_height="wrap_content"-->
 
-
-        <TextView
-            android:id="@+id/textUsernameLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/textView_enter_username" />
-
-        <EditText
-            android:id="@+id/username_edit_text"
+        <LinearLayout
+            android:id="@+id/loginWidgetsLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/editText_enter_username"
-            android:inputType="text"
-            android:padding="5dp" />
+            android:orientation="vertical"
+            android:visibility="visible">
 
-        <TextView
-            android:id="@+id/textPasswordLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/textView_enter_password" />
+            <TextView
+                android:id="@+id/textUsernameLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/textView_enter_username" />
+
+            <EditText
+                android:id="@+id/username_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/editText_enter_username"
+                android:inputType="text"
+                android:padding="5dp" />
+
+            <TextView
+                android:id="@+id/textPasswordLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/textView_enter_password" />
 
 
-        <EditText
-            android:id="@+id/password_edit_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:padding="5dp" />
+            <EditText
+                android:id="@+id/password_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:padding="5dp" />
 
-        <TextView
-            android:id="@+id/login_failed_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Login failed. Please check your username and password are correct."
-            android:visibility="gone" />
+            <TextView
+                android:id="@+id/login_failed_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login failed. Please check your username and password are correct."
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/linearlayout_buttons"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/button_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="1"
+                    android:text="@string/btn_login_text" />
+
+                <Button
+                    android:id="@+id/button_sign_up"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="1"
+                    android:text="@string/btn_sign_up_text" />
+
+            </LinearLayout>
+        </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/linearlayout_buttons"
+            android:id="@+id/signUpWidgetsLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
 
+            <TextView
+                android:id="@+id/textNewUsernameLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/textView_enter_username" />
 
-            <Button
-                android:id="@+id/button_login"
+            <EditText
+                android:id="@+id/newUsername_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:layout_weight="1"
-                android:text="@string/btn_login_text" />
+                android:hint="@string/editText_enter_username"
+                android:inputType="text"
+                android:padding="5dp" />
 
-            <Button
-                android:id="@+id/button_sign_up"
+            <TextView
+                android:id="@+id/textNewPasswordLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/textView_enter_password" />
+
+
+            <EditText
+                android:id="@+id/newPassword_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:layout_weight="1"
-                android:text="@string/btn_sign_up_text" />
+                android:inputType="textPassword"
+                android:padding="5dp" />
 
+            <TextView
+                android:id="@+id/new_password_invalid_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Entered password is invalid"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/newConfirmPassword_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:padding="5dp" />
+
+            <TextView
+                android:id="@+id/new_confirm_password_invalid_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Confirmed password does not match new password"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/signUp_failed_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Given information is invalid. Please correct the indicated fields to continue."
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/linearlayout_signUp_Action_buttons"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/button_cancel_signUp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="1"
+                    android:text="Cancel" />
+
+                <Button
+                    android:id="@+id/button_confirm_sign_up"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="1"
+                    android:text="Finish" />
+
+            </LinearLayout>
         </LinearLayout>
+
     </LinearLayout>
 
     <LinearLayout
