@@ -68,13 +68,17 @@ class Logic
             {
                 return Pair(false, "Entered username is already in use")
             }
-
         }
 
-        fun validateEmail()
+        fun validateEmail(recEmail: String): Pair<Boolean, String>
         {
-
-
+            if(checkEmails(recEmail)){
+                return Pair(true, "")
+            }
+            else
+            {
+                return Pair(false, "Entered email address is already in use")
+            }
         }
 
         //Function that checks for validity and strength of given password
@@ -167,6 +171,12 @@ class Logic
             {
                 return false
             }
+            return true
+        }
+
+        fun checkEmails(recUsername: String): Boolean
+        {
+            //Real implementation would connect to database and check for any duplicate email addresses
             return true
         }
 

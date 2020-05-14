@@ -181,7 +181,33 @@ class LoginActivity : AppCompatActivity() {
     {
         var retVal = false
 
-        //Checks for a valid password
+        //Check for a valid username
+        val usernameResult = Logic.validateUsername(recUserName)
+        if(usernameResult.first)
+        {
+            retVal = true
+        }
+        else
+        {
+            //Display warning message
+            textUsernameInvalid.text = usernameResult.second
+            return false
+        }
+
+        //Check for a valid email address
+        val emailResult = Logic.validateUsername(recEmail)
+        if(emailResult.first)
+        {
+            retVal = true
+        }
+        else
+        {
+            //Display warning message
+            textEmailInvalid.text = emailResult.second
+            return false
+        }
+
+        //Check for a valid password
         val passwordResult = Logic.validatePassword(recPassword)
         if(passwordResult.first)
         {
@@ -194,7 +220,7 @@ class LoginActivity : AppCompatActivity() {
             return false
         }
 
-        //Checks for a valid confirmed password
+        //Check for a valid confirmed password
         val confirmPasswordResult = Logic.validateConfirmPassword(recPassword, recConfirmPassword)
         if(confirmPasswordResult.first)
         {
