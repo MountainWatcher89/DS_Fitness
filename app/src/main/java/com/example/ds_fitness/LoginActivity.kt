@@ -8,6 +8,7 @@ import android.widget.EditText
 import android.view.View
 import android.widget.LinearLayout
 import android.widget.TextView
+import kotlinx.android.synthetic.main.login_layout.*
 import org.w3c.dom.Text
 
 class LoginActivity : AppCompatActivity() {
@@ -147,7 +148,7 @@ class LoginActivity : AppCompatActivity() {
             else
             {
                 //Change sign up widgets to explain reason for account creation failure
-
+                signUp_failed_text.visibility = View.VISIBLE
             }
         }
     }
