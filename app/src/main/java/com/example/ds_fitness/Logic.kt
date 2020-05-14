@@ -182,10 +182,10 @@ class Logic
 
         //This function is called when a user creates a valid account
         //This function would then communicate with a database to add the new  user account
-        fun createUserAccount()
+        fun createUserAccount(): Boolean
         {
-
-
+            //Returns true if the process of adding the account to the database is successful
+            return true
         }
     }
 

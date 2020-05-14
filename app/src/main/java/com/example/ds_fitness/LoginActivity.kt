@@ -143,7 +143,12 @@ class LoginActivity : AppCompatActivity() {
                 enteredNewPassword.text.toString(),
                 enteredNewConfirmedPassword.text.toString()))
             {
-
+                if(Logic.createUserAccount())
+                {
+                    val intent = Intent(this, homePage::class.java)
+                    intent.putExtra("ID_EXTRA", enteredNewUsername.text.toString())
+                    startActivity(intent)
+                }
             }
             else
             {
