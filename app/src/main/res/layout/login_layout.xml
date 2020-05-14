@@ -138,7 +138,7 @@
                 android:id="@+id/username_invalid_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Entered username is already in use or is not allowed. Enter a different username."
+                android:text="Error"
                 android:visibility="gone" />
 
             <TextView
@@ -159,7 +159,7 @@
                 android:id="@+id/email_invalid_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Entered email address is already in use or is not allowed. Enter a different username."
+                android:text="Error"
                 android:visibility="gone" />
 
             <TextView
@@ -180,7 +180,7 @@
                 android:id="@+id/new_password_invalid_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Entered password is invalid"
+                android:text="Error"
                 android:visibility="gone" />
 
             <EditText
@@ -194,7 +194,7 @@
                 android:id="@+id/new_confirm_password_invalid_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Confirmed password does not match new password"
+                android:text="Error"
                 android:visibility="gone" />
 
             <TextView

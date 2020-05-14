@@ -137,12 +137,19 @@ class LoginActivity : AppCompatActivity() {
         //Sign up button listener
         buttonFinishSignUp.setOnClickListener()
         {
-            validateCreateAccount(enteredNewUsername.text.toString(),
+            if(tryToCreateAccount(enteredNewUsername.text.toString(),
                 enteredNewEmail.text.toString(),
                 enteredNewPassword.text.toString(),
-                enteredNewConfirmedPassword.text.toString())
-        }
+                enteredNewConfirmedPassword.text.toString()))
+            {
 
+            }
+            else
+            {
+                //Change sign up widgets to explain reason for account creation failure
+
+            }
+        }
     }
 
     private fun validateLoginAttempt(recUserName: String, recPassword: String)
@@ -161,10 +168,6 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    private fun validateCreateAccount(recUserName: String, recEmail: String, recPassword: String, recConfirmPassword: String)
-    {
-
-    }
 
     private fun showFailedLoginState()
     {
@@ -174,4 +177,35 @@ class LoginActivity : AppCompatActivity() {
 
     }
 
+    fun tryToCreateAccount(recUserName: String, recEmail: String, recPassword: String, recConfirmPassword: String): Boolean
+    {
+        var retVal = false
+
+        //Checks for a valid password
+        val passwordResult = Logic.validatePassword(recPassword)
+        if(passwordResult.first)
+        {
+            retVal = true
+        }
+        else
+        {
+            //Display warning message
+            textNewPasswordInvalid.text = passwordResult.second
+            return false
+        }
+
+        //Checks for a valid confirmed password
+        val confirmPasswordResult = Logic.validateConfirmPassword(recPassword, recConfirmPassword)
+        if(confirmPasswordResult.first)
+        {
+            retVal = true
+        }
+        else
+        {
+            //Display warning message
+            textNewConfirmedPasswordInvalid.text = confirmPasswordResult.second
+            return false
+        }
+        return retVal
+    }
 }
