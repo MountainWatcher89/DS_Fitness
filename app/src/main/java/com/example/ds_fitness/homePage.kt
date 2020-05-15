@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
 import java.util.logging.Logger
@@ -11,9 +12,12 @@ import java.util.logging.Logger
 class homePage : AppCompatActivity(){
 
     private lateinit var textUsername: TextView
+    private lateinit var buttonSignOut: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        buttonSignOut = findViewById(R.id.buttonSignOut)
 
         try {
             setContentView(R.layout.homepage_layout)
@@ -58,6 +62,14 @@ class homePage : AppCompatActivity(){
 
             startActivity(intent)
         }
+
+        
+        buttonSignOut.setOnClickListener()
+        {
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
 }

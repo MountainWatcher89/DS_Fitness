@@ -64,7 +64,7 @@ class LoginActivity : AppCompatActivity() {
         textUsernameInvalid = findViewById(R.id.username_invalid_text)
         textEmailInvalid = findViewById(R.id.email_invalid_text)
         textNewPasswordInvalid = findViewById(R.id.new_password_invalid_text)
-        textNewConfirmedPasswordInvalid = findViewById(R.id.newConfirmPassword_edit_text)
+        textNewConfirmedPasswordInvalid = findViewById(R.id.new_confirm_password_invalid_text)
         textSignUpFailed = findViewById(R.id.signUp_failed_text)
 
 
@@ -91,6 +91,8 @@ class LoginActivity : AppCompatActivity() {
 
             Logic.disableButton(buttonLogin)
             Logic.disableButton(buttonSignUp)
+
+            textLoginFailed.visibility = View.GONE
 
             //Hide the login section
             myLoginLinearLayout.visibility = View.GONE
@@ -120,6 +122,12 @@ class LoginActivity : AppCompatActivity() {
 
             Logic.disableButton(buttonCancelSignUp)
             Logic.disableButton(buttonFinishSignUp)
+
+            textUsernameInvalid.visibility = View.GONE
+            textEmailInvalid.visibility = View.GONE
+            textNewPasswordInvalid.visibility = View.GONE
+            textNewConfirmedPasswordInvalid.visibility = View.GONE
+            textSignUpFailed.visibility = View.GONE
 
             //Hide the sign up section
             mySignUpLinearLayout.visibility = View.GONE
@@ -197,6 +205,7 @@ class LoginActivity : AppCompatActivity() {
         {
             //Display warning message
             textUsernameInvalid.text = usernameResult.second
+            textUsernameInvalid.visibility = View.VISIBLE
             return false
         }
 
@@ -210,6 +219,7 @@ class LoginActivity : AppCompatActivity() {
         {
             //Display warning message
             textEmailInvalid.text = emailResult.second
+            textEmailInvalid.visibility = View.VISIBLE
             return false
         }
 
@@ -223,6 +233,7 @@ class LoginActivity : AppCompatActivity() {
         {
             //Display warning message
             textNewPasswordInvalid.text = passwordResult.second
+            textNewPasswordInvalid.visibility = View.VISIBLE
             return false
         }
 
@@ -236,6 +247,7 @@ class LoginActivity : AppCompatActivity() {
         {
             //Display warning message
             textNewConfirmedPasswordInvalid.text = confirmPasswordResult.second
+            textNewConfirmedPasswordInvalid.visibility = View.VISIBLE
             return false
         }
         return retVal
