@@ -9,7 +9,6 @@ import android.view.View
 import android.widget.LinearLayout
 import android.widget.TextView
 import kotlinx.android.synthetic.main.login_layout.*
-import org.w3c.dom.Text
 
 class LoginActivity : AppCompatActivity() {
 
@@ -153,7 +152,7 @@ class LoginActivity : AppCompatActivity() {
             {
                 if(Logic.createUserAccount())
                 {
-                    val intent = Intent(this, homePage::class.java)
+                    val intent = Intent(this, Homepage::class.java)
                     intent.putExtra("ID_EXTRA", enteredNewUsername.text.toString())
                     startActivity(intent)
                 }
@@ -171,7 +170,7 @@ class LoginActivity : AppCompatActivity() {
         if(Logic.validate(recUserName, recPassword))
         {
             //progress to the homepage
-            val intent = Intent(this, homePage::class.java)
+            val intent = Intent(this, Homepage::class.java)
             intent.putExtra("ID_EXTRA", recUserName)
             startActivity(intent)
         }

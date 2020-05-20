@@ -16,7 +16,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".homePage"></activity>
+        <activity android:name=".Homepage"></activity>
         <activity android:name=".BMIActivity"/>
         <activity android:name=".NutritionActivity"/>
         <activity android:name=".TrackingActivity"/>

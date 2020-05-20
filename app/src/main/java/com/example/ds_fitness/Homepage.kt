@@ -3,13 +3,12 @@ package com.example.ds_fitness
 import androidx.appcompat.app.AppCompatActivity
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
 import java.util.logging.Logger
 
-class homePage : AppCompatActivity(){
+class Homepage : AppCompatActivity(){
 
     private lateinit var textUsername: TextView
     private lateinit var buttonSignOut: Button
@@ -24,7 +23,7 @@ class homePage : AppCompatActivity(){
         }
         catch (e: Exception)
         {
-            Logger.getLogger(homePage::class.java.name).warning("An error occured while trying to create the activity: " + e.toString())
+            Logger.getLogger(Homepage::class.java.name).warning("An error occured while trying to create the activity: " + e.toString())
             throw e
         }
 
@@ -63,7 +62,7 @@ class homePage : AppCompatActivity(){
             startActivity(intent)
         }
 
-        
+
         buttonSignOut.setOnClickListener()
         {
             val intent = Intent(this, LoginActivity::class.java)
