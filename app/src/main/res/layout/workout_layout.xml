@@ -1,6 +1,177 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/greyBackground"
+    android:fillViewport="true"
+    tools:context=".LoginActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="82dp"
+            android:background="@drawable/banner_rectangle"
+            android:gravity="top"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textAppTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Workouts"
+                android:textColor="@color/colorTitleText"
+                android:textSize="50sp" />
+        </LinearLayout>
+
+        <TabHost
+            android:id="@+id/tab_host"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FF00BFA5"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </TabWidget>
+
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="392dp"
+                    android:layout_height="match_parent">
+
+                    <!--tab1-->
+                    <LinearLayout
+                        android:id="@+id/tabOne"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/backgroundcolor"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:text="@string/Work_Out_Plan_One"
+                            android:textColor="#000"
+                            android:textSize="12sp">
+
+                        </TextView>
+                    </LinearLayout>
+
+                    <!--tab2-->
+                    <LinearLayout
+                        android:id="@+id/tabTwo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/backgroundcolor"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Work_Out_Plan_Two"
+                            android:textColor="#000"
+                            android:textSize="12sp">
+                        </TextView>
+                    </LinearLayout>
+
+                    <!--tab3-->
+                    <LinearLayout
+                        android:id="@+id/tabThree"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/backgroundcolor"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Work_Out_Plan_Three"
+                            android:textColor="#000"
+                            android:textSize="12sp">
+                        </TextView>
+                    </LinearLayout>
+
+                    <!--tab4-->
+                    <LinearLayout
+                        android:id="@+id/tabFour"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/backgroundcolor"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Work_Out_Plan_Four"
+                            android:textColor="#000"
+                            android:textSize="12sp">
+                        </TextView>
+                    </LinearLayout>
+
+                    <!--tab5-->
+                    <LinearLayout
+                        android:id="@+id/tabFive"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/backgroundcolor"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Work_Out_Plan_Five"
+                            android:textColor="#000"
+                            android:textSize="12sp">
+                        </TextView>
+                    </LinearLayout>
+
+                </FrameLayout>
+            </LinearLayout>
+        </TabHost>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="bottom">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/banner_rectangle">
+
+                <TextView
+                    android:id="@+id/textAppTitle2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text=""
+                    android:textSize="50sp"
+                    android:textColor="@color/colorTitleText" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
