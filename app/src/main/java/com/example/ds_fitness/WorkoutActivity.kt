@@ -50,7 +50,7 @@ class WorkoutActivity : AppCompatActivity() {
 
         buttonSignOut.setOnClickListener()
         {
-            val intent = Intent(this, LoginActivity::class.java)
+            val intent = Intent(this, Homepage::class.java)
             startActivity(intent)
         }
     }
