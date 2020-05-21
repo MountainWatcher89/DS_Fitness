@@ -1,14 +1,20 @@
 package com.example.ds_fitness
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import kotlinx.android.synthetic.main.workout_layout.*
 
 class WorkoutActivity : AppCompatActivity() {
 
+    private lateinit var buttonSignOut: Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.workout_layout)
+
+        buttonSignOut = findViewById(R.id.buttonSignOut)
 
         tab_host.setup()
 
@@ -41,5 +47,11 @@ class WorkoutActivity : AppCompatActivity() {
         spec.setContent(R.id.tabFive)
         spec.setIndicator("Work Out Plan 5")
         tab_host.addTab(spec)
+
+        buttonSignOut.setOnClickListener()
+        {
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

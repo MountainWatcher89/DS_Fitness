@@ -25,8 +25,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:text="Yourprogress"
-                android:textSize="20sp"
+                android:text="Activity tracker"
+                android:textSize="25sp"
                 android:textColor="@color/colorTitleText" />
 
         </LinearLayout>
@@ -35,7 +35,9 @@
             android:layout_width="400dp"
             android:layout_height="210dp"
             android:orientation="horizontal"
-            android:background="@drawable/border">
+            android:background="@drawable/border"
+            android:layout_gravity="center"
+            android:padding="10dp">
 
             <TextView
                 android:id="@+id/textView15"
@@ -51,7 +53,7 @@
             <LinearLayout
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:layout_marginTop="80dp"
+                android:layout_marginTop="70dp"
                 android:layout_marginLeft="-250dp"
                 android:background="@drawable/cerclebackgroundwhite"
                 android:layout_marginStart="-250dp">
@@ -72,7 +74,7 @@
             <LinearLayout
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:layout_marginTop="80dp"
+                android:layout_marginTop="70dp"
                 android:layout_marginLeft="20dp"
                 android:background="@drawable/cerclebackgroundwhite"
                 android:layout_marginStart="20dp">
@@ -91,7 +93,7 @@
             <LinearLayout
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:layout_marginTop="80dp"
+                android:layout_marginTop="70dp"
                 android:layout_marginLeft="20dp"
                 android:background="@drawable/cerclebackgroundwhite"
                 android:layout_marginStart="20dp">
@@ -412,7 +414,7 @@
                 android:id="@+id/buttonSignOut"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/sign_off" />
+                android:text="Back to homepage" />
 
         </LinearLayout>
 
