@@ -46,7 +46,7 @@ class Homepage : AppCompatActivity(){
         }
 
         nutritionBtn.setOnClickListener {
-            val intent = Intent(this, NutritionActivity::class.java)
+            val intent = Intent(this, NutritionStart::class.java)
 
             startActivity(intent)
         }
