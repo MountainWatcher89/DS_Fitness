@@ -25,12 +25,12 @@ class NutritionStart : AppCompatActivity() {
         }
     }
     fun sendMessage(view: View) {
-        val editText = findViewById<EditText>(R.id.editText)
-        val message = editText.text.toString()
-        val intent = Intent(this, Nutrition::class.java).apply {
-            putExtra(EXTRA_MESSAGE, message)
-        }
-        startActivity(intent)
+        //val editText = findViewById<EditText>(R.id.editText)
+        //val message = editText.text.toString()
+        //val intent = Intent(this, Nutrition::class.java).apply {
+        //    putExtra(EXTRA_MESSAGE, message)
+        //}
+        //startActivity(intent)
 
     }
 }
