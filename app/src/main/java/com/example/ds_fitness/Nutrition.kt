@@ -35,9 +35,8 @@ class Nutrition : AppCompatActivity() {
     fun sendMessage() {
         val editText = findViewById<EditText>(R.id.someText_edit_text)
         val message = editText.text.toString()
-        val intent = Intent(this, NutritionInfo::class.java).apply {
-            putExtra(EXTRA_MESSAGE, message)
-        }
+        val intent = Intent(this, NutritionInfo::class.java)
+        intent.putExtra(EXTRA_MESSAGE, message)
         startActivity(intent)
     }
 }

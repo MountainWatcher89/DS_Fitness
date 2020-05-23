@@ -30,11 +30,15 @@
                 android:textSize="50sp" />
         </LinearLayout>
 
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp"/>
+
         <TextView
             android:id="@+id/textView3"
-            android:layout_width="163dp"
-            android:layout_height="50dp"
-            android:text="         Meat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Meat"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -43,9 +47,7 @@
             android:id="@+id/imageView2"
             android:layout_width="201dp"
             android:layout_height="204dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView3"
-            tools:srcCompat="@drawable/meat" />
+            android:background="@drawable/meat" />
 
         <TextView
             android:id="@+id/textView4"

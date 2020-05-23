@@ -98,7 +98,7 @@
                 android:id="@+id/imageView"
                 android:layout_width="110dp"
                 android:layout_height="64dp"
-                tools:srcCompat="@drawable/meat" />
+                tools:srcCompat="@drawable/meat"/>
 
             <ProgressBar
                 android:id="@+id/progressBar"
