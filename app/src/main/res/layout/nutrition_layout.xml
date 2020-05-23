@@ -1,110 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     tools:context=".NutritionStart">
 
-    <ProgressBar
-        android:id="@+id/progressBar2"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="192dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="64dp"
-        android:layout_marginRight="64dp"
-        android:indeterminate="false"
-        android:progress="@android:integer/config_shortAnimTime"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <CalendarView
-        android:id="@+id/calendarView"
-        android:layout_width="273dp"
-        android:layout_height="208dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginLeft="68dp"
-        android:layout_marginTop="56dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/searchView" />
+        <LinearLayout
+            android:id="@+id/linearlayout_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
 
-    <SearchView
-        android:id="@+id/searchView"
-        android:layout_width="146dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="23dp"
-        android:layout_marginLeft="23dp"
-        android:layout_marginTop="40dp"
-        app:layout_constraintStart_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="195dp"
+                android:layout_height="61dp"
+                android:text="            Food          Consumption"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
 
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="192dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="64dp"
-        android:layout_marginRight="64dp"
-        android:indeterminate="false"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/calendarView" />
+            <SearchView
+                android:id="@+id/searchView"
+                android:layout_width="146dp"
+                android:layout_height="wrap_content" />
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="106dp"
-        android:layout_height="54dp"
-        android:layout_marginBottom="56dp"
-        android:onClick="sendMessage"
-        android:text="Submit"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="195dp"
-        android:layout_height="61dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
-        android:layout_marginTop="40dp"
-        android:text="            Food          Consumption"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="273dp"
+            android:layout_height="208dp"
+            android:layout_marginStart="68dp"
+            android:layout_marginLeft="68dp"
+            android:layout_marginTop="56dp"/>
 
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="117dp"
-        android:layout_height="74dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginEnd="22dp"
-        android:layout_marginRight="22dp"
-        android:layout_marginBottom="48dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
-        app:layout_constraintEnd_toStartOf="@+id/progressBar"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/fishy"
-        tools:srcCompat="@drawable/fishy" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="110dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginRight="25dp"
-        android:layout_marginBottom="175dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/progressBar2"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/meat"
-        tools:srcCompat="@drawable/meat" />
+        <ProgressBar
+            android:id="@+id/progressBar2"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="192dp"
+            android:layout_height="57dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="64dp"
+            android:layout_marginRight="64dp"
+            android:indeterminate="false"
+            android:progress="@android:integer/config_shortAnimTime" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="192dp"
+            android:layout_height="57dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="64dp"
+            android:layout_marginRight="64dp"
+            android:indeterminate="false" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="117dp"
+            android:layout_height="74dp"
+            android:layout_marginBottom="48dp"/>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="110dp"
+            android:layout_height="64dp"
+            tools:srcCompat="@drawable/meat" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="106dp"
+            android:layout_height="54dp"
+            android:onClick="sendMessage"
+            android:text="Submit" />
+
+
+    </LinearLayout>
+</ScrollView>
