@@ -138,7 +138,6 @@
                 android:id="@+id/buttonSubmitText"
                 android:layout_width="106dp"
                 android:layout_height="54dp"
-                android:onClick="sendMessage"
                 android:text="Submit" />
 
         </LinearLayout>
